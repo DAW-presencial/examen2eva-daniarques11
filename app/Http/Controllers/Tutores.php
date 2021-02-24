@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Agreement;
 use App\Models\Company;
 use App\Models\Person;
+use App\Models\Tutor;
 use App\Models\WorkingCenter;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -58,7 +59,17 @@ class Tutores extends Controller
             ]
         );
         
-        
+        DB::beginTransaction();
+        try {
+            $parameters = $request->all();
+            Tutor::create($parameters);
+
+            DB::commit();
+        } catch (\Exception $e) {
+            DB::rollback();
+            throw $e;
+        }
+        return $request;
     }
 
     /**
