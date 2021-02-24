@@ -20,7 +20,7 @@ class CreateTutoresTable extends Migration
             $table->string('documentoIdentidad')->unique();
             $table->string('nombre');
             $table->string('primerApellido');
-            $table->string('segundoApellido');
+            $table->string('segundoApellido')->nullable();
             $table->string('pais')->nullable();
             $table->string('provincia')->nullable();
             $table->string('municipio')->nullable();

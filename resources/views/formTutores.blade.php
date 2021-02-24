@@ -43,29 +43,29 @@
             <div class="form-row">
                 <div class="form-group">
                     <label for="nombreEmpresa">@lang('formTutores.nombreEmpresa')</label>
-                    <input type="text" class="form-control" name="nombreEmpresa" value="{{ old('nombreEmpresa') }}" S.L.">
+                    <input type="text" class="form-control" name="nombreEmpresa" value="{{ old('nombreEmpresa') }}" required>
                 </div>
                 <div class="form-group col-md-4">
                     <label for="tipoDocumento">@lang('formTutores.tipoDocumento')</label>
-                    <select name="tipoDocumento" value="{{ old('tipoDocumento') }}" class="form-control">
+                    <select name="tipoDocumento" value="{{ old('tipoDocumento') }}" class="form-control" required>
                         <option value="DNI">DNI</option>
                         <option value="NIE">NIE</option>
                     </select>
                 </div>
                 <div class="form-group col-md-4">
                     <label for="documentoIdentidad">@lang('formTutores.documentoIdentidad')</label>
-                    <input type="tel" class="form-control" name="documentoIdentidad" value="{{ old('documentoIdentidad') }}" >
+                    <input type="tel" class="form-control" name="documentoIdentidad" value="{{ old('documentoIdentidad') }}" required>
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="nombre">@lang('formTutores.nombre')</label>
-                    <input type="text" class="form-control" name="nombre" value="{{ old('nombre') }}">
+                    <input type="text" class="form-control" name="nombre" value="{{ old('nombre') }}" required>
                 </div>
                 <div class="form-group col-md-4">
                     <label for="primerApellido">@lang('formTutores.primerApellido')</label>
-                    <input type="text" class="form-control" name="primerApellido" value="{{ old('primerApellido') }}">
+                    <input type="text" class="form-control" name="primerApellido" value="{{ old('primerApellido') }}" required>
                 </div>
                 <div class="form-group col-md-4">
                     <label for="segundoApellido">@lang('formTutores.segundoApellido')</label>
@@ -100,12 +100,12 @@
                 </div>
                 <div class="form-group">
                     <label for="telefono">@lang('formTutores.telefono')</label>
-                    <input type="text" class="form-control" name="telefono" value="{{ old('telefono') }}">
+                    <input type="text" class="form-control" name="telefono" value="{{ old('telefono') }}" required>
                 </div>
 
                 <div class="form-group col-md-4">
                     <label for="email">@lang('formTutores.email')</label>
-                    <input type="tel" class="form-control" name="email" value="{{ old('email') }}">
+                    <input type="tel" class="form-control" name="email" value="{{ old('email') }}" required>
                 </div>
             </div>
         </div>
