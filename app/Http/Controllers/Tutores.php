@@ -3,7 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Agreement;
+use App\Models\Company;
+use App\Models\Person;
+use App\Models\WorkingCenter;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class Tutores extends Controller
 {
@@ -52,6 +57,8 @@ class Tutores extends Controller
                 'email' => "required|email",
             ]
         );
+        
+        
     }
 
     /**
