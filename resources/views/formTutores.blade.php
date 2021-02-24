@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Pricing example for Bootstrap</title>
+    <title>Examen Dani Arques</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -31,17 +31,14 @@
         <a class="btn btn-outline-primary" href="#">Sign up</a>
     </div>
 
-    @if (count($errors) > 0)
-    <div class="errors-container">
-        <ul>
-            {{ @foreach($errors as $error) }}
-            <li> {{ $error }}</li>
-            {{ @endforeach }}
-        </ul>
-    </div>
+    @if ($errors->any())
+    @foreach ($errors->all() as $error)
+    <div class="alert alert-danger">{{$error}}</div>
+    @endforeach
     @endif
+
     <!--Form-->
-    <form method="POST" action="/form" class="container mt-5">
+    <form method="POST" action="/formTutores" class="container mt-5">
         @csrf
         <div>
             <h2>
@@ -117,7 +114,7 @@
                 </div>
                 <div class="form-group col-md-4">
                     <label for="municipio">@lang('formTutores.municipio')</label>
-                    <input type="number" class="form-control" name="municipio" value="{{ old('municipio') }}">
+                    <input type="text" class="form-control" name="municipio" value="{{ old('municipio') }}">
                     @error('municipio')
                     <div class="text-danger my-2">{{ $message }}</div>
                     @enderror

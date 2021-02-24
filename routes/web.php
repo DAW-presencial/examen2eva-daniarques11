@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TutoresController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,7 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/form', function(){
-    return view('formTutores');
-});
-
+Route::resource('/formTutores', TutoresController::class);

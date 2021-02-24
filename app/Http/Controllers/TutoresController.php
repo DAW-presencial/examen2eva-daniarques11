@@ -3,15 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\Agreement;
-use App\Models\Company;
-use App\Models\Person;
 use App\Models\Tutor;
-use App\Models\WorkingCenter;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\View;
 
-class Tutores extends Controller
+class TutoresController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,7 +18,12 @@ class Tutores extends Controller
      */
     public function index()
     {
-        //
+        // get all the sharks
+        $tutores = Tutor::all();
+
+        // load the view and pass the sharks
+        return View::make('tutores.index')
+            ->with('tutores', $tutores);
     }
 
     /**
@@ -30,7 +33,7 @@ class Tutores extends Controller
      */
     public function create()
     {
-        //
+        return view('formTutores');
     }
 
     /**
@@ -69,7 +72,7 @@ class Tutores extends Controller
             DB::rollback();
             throw $e;
         }
-        return $request;
+        return Redirect::to('tutores');
     }
 
     /**
@@ -80,7 +83,12 @@ class Tutores extends Controller
      */
     public function show($id)
     {
-        //
+        // get the shark
+        $tutor = Tutor::find($id);
+
+        // show the view and pass the shark to it
+        return View::make('tutor.show')
+            ->with('tutor', $tutor);
     }
 
     /**
