@@ -31,6 +31,15 @@
         <a class="btn btn-outline-primary" href="#">Sign up</a>
     </div>
 
+    @if (count($errors) > 0)
+    <div class="errors-container">
+        <ul>
+            {{ @foreach($errors as $error) }}
+            <li> {{ $error }}</li>
+            {{ @endforeach }}
+        </ul>
+    </div>
+    @endif
     <!--Form-->
     <form method="POST" action="/form" class="container mt-5">
         @csrf
@@ -44,6 +53,9 @@
                 <div class="form-group">
                     <label for="nombreEmpresa">@lang('formTutores.nombreEmpresa')</label>
                     <input type="text" class="form-control" name="nombreEmpresa" value="{{ old('nombreEmpresa') }}" required>
+                    @error('nombreEmpresa')
+                    <div class="text-danger my-2">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="form-group col-md-4">
                     <label for="tipoDocumento">@lang('formTutores.tipoDocumento')</label>
@@ -51,10 +63,16 @@
                         <option value="DNI">DNI</option>
                         <option value="NIE">NIE</option>
                     </select>
+                    @error('tipoDocumento')
+                    <div class="text-danger my-2">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="form-group col-md-4">
                     <label for="documentoIdentidad">@lang('formTutores.documentoIdentidad')</label>
                     <input type="tel" class="form-control" name="documentoIdentidad" value="{{ old('documentoIdentidad') }}" required>
+                    @error('documentoIdentidad')
+                    <div class="text-danger my-2">{{ $message }}</div>
+                    @enderror
                 </div>
             </div>
 
@@ -62,14 +80,23 @@
                 <div class="form-group col-md-4">
                     <label for="nombre">@lang('formTutores.nombre')</label>
                     <input type="text" class="form-control" name="nombre" value="{{ old('nombre') }}" required>
+                    @error('nombre')
+                    <div class="text-danger my-2">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="form-group col-md-4">
                     <label for="primerApellido">@lang('formTutores.primerApellido')</label>
                     <input type="text" class="form-control" name="primerApellido" value="{{ old('primerApellido') }}" required>
+                    @error('primerApellido')
+                    <div class="text-danger my-2">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="form-group col-md-4">
                     <label for="segundoApellido">@lang('formTutores.segundoApellido')</label>
                     <input type="number" class="form-control" name="segundoApellido" value="{{ old('segundoApellido') }}">
+                    @error('segundoApellido')
+                    <div class="text-danger my-2">{{ $message }}</div>
+                    @enderror
                 </div>
             </div>
 
@@ -77,14 +104,23 @@
                 <div class="form-group col-md-4">
                     <label for="pais">@lang('formTutores.pais')</label>
                     <input type="text" class="form-control" name="pais" value="{{ old('pais') }}">
+                    @error('pais')
+                    <div class="text-danger my-2">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="form-group col-md-4">
                     <label for="provincia">@lang('formTutores.provincia')</label>
                     <input type="text" class="form-control" name="provincia" value="{{ old('provincia') }}">
+                    @error('provincia')
+                    <div class="text-danger my-2">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="form-group col-md-4">
                     <label for="municipio">@lang('formTutores.municipio')</label>
                     <input type="number" class="form-control" name="municipio" value="{{ old('municipio') }}">
+                    @error('municipio')
+                    <div class="text-danger my-2">{{ $message }}</div>
+                    @enderror
                 </div>
             </div>
 
@@ -97,15 +133,24 @@
                         <option value="activo">Activo</option>
                         <option value="inactivo" {{ (old('estado') == "inactivo") ? "selected" :""}}>inactivo</option>
                     </select>
+                    @error('estado')
+                    <div class="text-danger my-2">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="form-group">
                     <label for="telefono">@lang('formTutores.telefono')</label>
                     <input type="text" class="form-control" name="telefono" value="{{ old('telefono') }}" required>
+                    @error('telefono')
+                    <div class="text-danger my-2">{{ $message }}</div>
+                    @enderror
                 </div>
 
                 <div class="form-group col-md-4">
                     <label for="email">@lang('formTutores.email')</label>
                     <input type="tel" class="form-control" name="email" value="{{ old('email') }}" required>
+                    @error('email')
+                    <div class="text-danger my-2">{{ $message }}</div>
+                    @enderror
                 </div>
             </div>
         </div>
