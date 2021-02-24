@@ -17,10 +17,9 @@
     </ul>
 </nav>
 
-<h1>Edit {{ $tutor->name }}</h1>
+<h1>Edit {{ $tutor->nombre }}</h1>
 
 NO IMPLEMENTADO
-
 </div>
 </body>
 </html>

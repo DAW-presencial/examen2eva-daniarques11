@@ -21,14 +21,14 @@
 <body class="w-100">
     <!--Nav bar-->
     <nav class="navbar navbar-inverse">
-    <div class="navbar-header">
-        <a class="navbar-brand" href="{{ URL::to('tutores') }}">View All tutores</a>
-    </div>
-    <div class="nav navbar-nav">
-        <div><a href="{{ URL::to('tutores') }}">View All tutores</a></div>
-        <div><a href="{{ URL::to('tutores/create') }}">Create a tutor</div>
-    </div>
-</nav>
+        <div class="navbar-header">
+            <a class="navbar-brand" href="{{ URL::to('tutores') }}">View All tutores</a>
+        </div>
+        <div class="nav navbar-nav">
+            <div><a href="{{ URL::to('tutores') }}">View All tutores</a></div>
+            <div><a href="{{ URL::to('tutores/create') }}">Create a tutor</div>
+        </div>
+    </nav>
     @if ($errors->any())
     @foreach ($errors->all() as $error)
     <div class="alert alert-danger">{{$error}}</div>

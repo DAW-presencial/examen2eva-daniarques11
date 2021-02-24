@@ -17,10 +17,10 @@
     </ul>
 </nav>
 
-<h1>Showing {{ $tutor->name }}</h1>
+<h1>Showing {{ $tutor->nombre }}</h1>
 
     <div class="jumbotron text-center">
-        <h2>{{ $tutor->name }}</h2>
+        <h2>{{ $tutor->nombre }}</h2>
         <p>
             <strong>Email:</strong> {{ $tutor->email }}<br>
             <strong>DNI:</strong> {{ $tutor->documentoIdentidad }}<br>

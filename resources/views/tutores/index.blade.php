@@ -13,7 +13,7 @@
     </div>
     <ul class="nav navbar-nav">
         <li><a href="{{ URL::to('tutores') }}">View All tutores</a></li>
-        <li><a href="{{ URL::to('tutores/create') }}">Create a tutor</a>
+        <li class="bg-blue-800"><a href="{{ URL::to('tutores/create') }}">Create a tutor</a>
     </ul>
 </nav>
 
