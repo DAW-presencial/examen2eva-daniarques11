@@ -48,14 +48,11 @@ class TutoresController extends Controller
         request()->validate(
             [
                 'nombreEmpresa' => "required|min:3|max:100",
-                'tipoDocumento' => "required|in:DNI,NIF",
+                'tipoDocumento' => "required",
                 'documentoIdentidad' => "required|min:3|max:10",
                 'nombre' => "required|min:3|max:100",
                 'primerApellido' => "required|min:3|max:100",
-                'segundoApellido' => "min:3|max:100",
                 'pais' => "min:3|max:100",
-                'provincia' => "min:3|max:100",
-                'municipio' => "min:3|max:100",
                 'estado' => "in:activo,inactivo",
                 'telefono' => "required|min:3|max:15",
                 'email' => "required|email",

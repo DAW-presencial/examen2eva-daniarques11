@@ -127,7 +127,6 @@
                     <label for="estado">@lang('formTutores.estado')</label>
                     <select name="estado" class="form-control">
                         <option value="activo" {{ (old('estado') == "activo") ? "selected" :""}}>Activo</option>
-                        <option value="activo">Activo</option>
                         <option value="inactivo" {{ (old('estado') == "inactivo") ? "selected" :""}}>inactivo</option>
                     </select>
                     @error('estado')
