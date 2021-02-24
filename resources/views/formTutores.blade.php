@@ -43,48 +43,48 @@
             <div class="form-row">
                 <div class="form-group">
                     <label for="nombreEmpresa">Empresa</label>
-                    <input type="text" class="form-control" name="nombreEmpresa" placeholder="Empresa S.L.">
+                    <input type="text" class="form-control" name="nombreEmpresa" value="{{ old('nombreEmpresa') }}" placeholder="Empresa S.L.">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="tipoDocumento">Tipo documento</label>
-                    <select name="tipoDocumento" class="form-control">
+                    <select name="tipoDocumento" value="{{ old('tipoDocumento') }}"> class="form-control">
                         <option value="DNI">DNI</option>
                         <option value="NIE">NIE</option>
                     </select>
                 </div>
                 <div class="form-group col-md-4">
                     <label for="documentoIdentidad">Documento identidad</label>
-                    <input type="tel" class="form-control" name="documentoIdentidad" placeholder="+34 971123456">
+                    <input type="tel" class="form-control" name="documentoIdentidad" value="{{ old('documentoIdentidad') }}" placeholder="+34 971123456">
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="nombre">Nombre</label>
-                    <input type="text" class="form-control" name="nombre" autocomplete="locality" placeholder="Palma de Mallorca">
+                    <input type="text" class="form-control" name="nombre" value="{{ old('nombre') }}" autocomplete="locality" placeholder="Palma de Mallorca">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="primerApellido">Primer apellido</label>
-                    <input type="text" class="form-control" name="primerApellido" autocomplete="street-address" placeholder="C/ Aragó 21">
+                    <input type="text" class="form-control" name="primerApellido" value="{{ old('primerApellido') }}" autocomplete="street-address" placeholder="C/ Aragó 21">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="segundoApellido">Segundo apellido</label>
-                    <input type="number" class="form-control" name="segundoApellido" autocomplete="postal-code" placeholder="07006">
+                    <input type="number" class="form-control" name="segundoApellido" value="{{ old('segundoApellido') }}" autocomplete="postal-code" placeholder="07006">
                 </div>
             </div>
 
             <div class="form-row">
-            <div class="form-group col-md-4">
+                <div class="form-group col-md-4">
                     <label for="pais">País documento identidad</label>
-                    <input type="text" class="form-control" name="pais" autocomplete="locality" placeholder="Palma de Mallorca">
+                    <input type="text" class="form-control" name="pais" value="{{ old('pais') }}" autocomplete="locality" placeholder="Palma de Mallorca">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="provincia">provincia</label>
-                    <input type="text" class="form-control" name="provincia" autocomplete="street-address" placeholder="C/ Aragó 21">
+                    <input type="text" class="form-control" name="provincia" value="{{ old('provincia') }}" autocomplete="street-address" placeholder="C/ Aragó 21">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="municipio">municipio</label>
-                    <input type="number" class="form-control" name="municipio" autocomplete="postal-code" placeholder="07006">
+                    <input type="number" class="form-control" name="municipio" value="{{ old('municipio') }}" autocomplete="postal-code" placeholder="07006">
                 </div>
             </div>
 
@@ -93,18 +93,20 @@
                 <div class="form-group col-md-4">
                     <label for="estado">Estado</label>
                     <select name="estado" class="form-control">
-                        <option value="activo">activo</option>
+                        <option value="activo" selected>Activo</option>
+                        <option value="activo">Activo</option>
+                        <option value="inactivo" selected>inactivo</option>
                         <option value="inactivo">inactivo</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="telefono">telefono</label>
-                    <input type="text" class="form-control" name="telefono" placeholder="Centre Empresa">
+                    <input type="text" class="form-control" name="telefono" value="{{ old('telefono') }}" placeholder="Centre Empresa">
                 </div>
 
                 <div class="form-group col-md-4">
                     <label for="email">Email</label>
-                    <input type="tel" class="form-control" name="email" placeholder="+34 971123456">
+                    <input type="tel" class="form-control" name="email" value="{{ old('email') }}" placeholder="+34 971123456">
                 </div>
             </div>
         </div>
