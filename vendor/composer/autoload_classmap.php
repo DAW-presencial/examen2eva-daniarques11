@@ -2020,6 +2020,8 @@ return array(
     'Laravel\\Tinker\\Console\\TinkerCommand' => $vendorDir . '/laravel/tinker/src/Console/TinkerCommand.php',
     'Laravel\\Tinker\\TinkerCaster' => $vendorDir . '/laravel/tinker/src/TinkerCaster.php',
     'Laravel\\Tinker\\TinkerServiceProvider' => $vendorDir . '/laravel/tinker/src/TinkerServiceProvider.php',
+    'Laraveles\\Spanish\\Commands\\InstallLang' => $vendorDir . '/laraveles/spanish/src/Commands/InstallLang.php',
+    'Laraveles\\Spanish\\SpanishServiceProvider' => $vendorDir . '/laraveles/spanish/src/SpanishServiceProvider.php',
     'League\\CommonMark\\Block\\Element\\AbstractBlock' => $vendorDir . '/league/commonmark/src/Block/Element/AbstractBlock.php',
     'League\\CommonMark\\Block\\Element\\AbstractStringContainerBlock' => $vendorDir . '/league/commonmark/src/Block/Element/AbstractStringContainerBlock.php',
     'League\\CommonMark\\Block\\Element\\BlockQuote' => $vendorDir . '/league/commonmark/src/Block/Element/BlockQuote.php',

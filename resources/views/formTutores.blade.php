@@ -42,71 +42,70 @@
 
             <div class="form-row">
                 <div class="form-group">
-                    <label for="nombreEmpresa">Empresa</label>
-                    <input type="text" class="form-control" name="nombreEmpresa" value="{{ old('nombreEmpresa') }}" placeholder="Empresa S.L.">
+                    <label for="nombreEmpresa">@lang('formTutores.nombreEmpresa')</label>
+                    <input type="text" class="form-control" name="nombreEmpresa" value="{{ old('nombreEmpresa') }}" S.L.">
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="tipoDocumento">Tipo documento</label>
-                    <select name="tipoDocumento" value="{{ old('tipoDocumento') }}"> class="form-control">
+                    <label for="tipoDocumento">@lang('formTutores.tipoDocumento')</label>
+                    <select name="tipoDocumento" value="{{ old('tipoDocumento') }}" class="form-control">
                         <option value="DNI">DNI</option>
                         <option value="NIE">NIE</option>
                     </select>
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="documentoIdentidad">Documento identidad</label>
-                    <input type="tel" class="form-control" name="documentoIdentidad" value="{{ old('documentoIdentidad') }}" placeholder="+34 971123456">
+                    <label for="documentoIdentidad">@lang('formTutores.documentoIdentidad')</label>
+                    <input type="tel" class="form-control" name="documentoIdentidad" value="{{ old('documentoIdentidad') }}" >
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group col-md-4">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" class="form-control" name="nombre" value="{{ old('nombre') }}" autocomplete="locality" placeholder="Palma de Mallorca">
+                    <label for="nombre">@lang('formTutores.nombre')</label>
+                    <input type="text" class="form-control" name="nombre" value="{{ old('nombre') }}">
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="primerApellido">Primer apellido</label>
-                    <input type="text" class="form-control" name="primerApellido" value="{{ old('primerApellido') }}" autocomplete="street-address" placeholder="C/ Aragó 21">
+                    <label for="primerApellido">@lang('formTutores.primerApellido')</label>
+                    <input type="text" class="form-control" name="primerApellido" value="{{ old('primerApellido') }}">
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="segundoApellido">Segundo apellido</label>
-                    <input type="number" class="form-control" name="segundoApellido" value="{{ old('segundoApellido') }}" autocomplete="postal-code" placeholder="07006">
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group col-md-4">
-                    <label for="pais">País documento identidad</label>
-                    <input type="text" class="form-control" name="pais" value="{{ old('pais') }}" autocomplete="locality" placeholder="Palma de Mallorca">
-                </div>
-                <div class="form-group col-md-4">
-                    <label for="provincia">provincia</label>
-                    <input type="text" class="form-control" name="provincia" value="{{ old('provincia') }}" autocomplete="street-address" placeholder="C/ Aragó 21">
-                </div>
-                <div class="form-group col-md-4">
-                    <label for="municipio">municipio</label>
-                    <input type="number" class="form-control" name="municipio" value="{{ old('municipio') }}" autocomplete="postal-code" placeholder="07006">
+                    <label for="segundoApellido">@lang('formTutores.segundoApellido')</label>
+                    <input type="number" class="form-control" name="segundoApellido" value="{{ old('segundoApellido') }}">
                 </div>
             </div>
 
             <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="pais">@lang('formTutores.pais')</label>
+                    <input type="text" class="form-control" name="pais" value="{{ old('pais') }}">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="provincia">@lang('formTutores.provincia')</label>
+                    <input type="text" class="form-control" name="provincia" value="{{ old('provincia') }}">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="municipio">@lang('formTutores.municipio')</label>
+                    <input type="number" class="form-control" name="municipio" value="{{ old('municipio') }}">
+                </div>
+            </div>
+
+            <div class="form-row">
 
                 <div class="form-group col-md-4">
-                    <label for="estado">Estado</label>
+                    <label for="estado">@lang('formTutores.estado')</label>
                     <select name="estado" class="form-control">
-                        <option value="activo" selected>Activo</option>
+                        <option value="activo" {{ (old('estado') == "activo") ? "selected" :""}}>Activo</option>
                         <option value="activo">Activo</option>
-                        <option value="inactivo" selected>inactivo</option>
-                        <option value="inactivo">inactivo</option>
+                        <option value="inactivo" {{ (old('estado') == "inactivo") ? "selected" :""}}>inactivo</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="telefono">telefono</label>
-                    <input type="text" class="form-control" name="telefono" value="{{ old('telefono') }}" placeholder="Centre Empresa">
+                    <label for="telefono">@lang('formTutores.telefono')</label>
+                    <input type="text" class="form-control" name="telefono" value="{{ old('telefono') }}">
                 </div>
 
                 <div class="form-group col-md-4">
-                    <label for="email">Email</label>
-                    <input type="tel" class="form-control" name="email" value="{{ old('email') }}" placeholder="+34 971123456">
+                    <label for="email">@lang('formTutores.email')</label>
+                    <input type="tel" class="form-control" name="email" value="{{ old('email') }}">
                 </div>
             </div>
         </div>
