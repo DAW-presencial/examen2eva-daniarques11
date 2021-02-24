@@ -17,7 +17,7 @@ class CreateTutoresTable extends Migration
             $table->id();
             $table->string('nombreEmpresa');
             $table->string('tipoDocumento');
-            $table->string('documentoIdentidad')->unique(());
+            $table->string('documentoIdentidad')->unique();
             $table->string('nombre');
             $table->string('primerApellido');
             $table->string('segundoApellido');
