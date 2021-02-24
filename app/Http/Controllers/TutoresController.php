@@ -33,7 +33,8 @@ class TutoresController extends Controller
      */
     public function create()
     {
-        return view('formTutores');
+        return View::make('tutores.create');
+
     }
 
     /**
@@ -80,11 +81,9 @@ class TutoresController extends Controller
      */
     public function show($id)
     {
-        // get the shark
         $tutor = Tutor::find($id);
 
-        // show the view and pass the shark to it
-        return View::make('tutor.show')
+        return View::make('tutores.show')
             ->with('tutor', $tutor);
     }
 
@@ -96,7 +95,10 @@ class TutoresController extends Controller
      */
     public function edit($id)
     {
-        //
+        $tutor = Tutor::find($id);
+
+        return View::make('tutores.edit')
+            ->with('tutor', $tutor);
     }
 
     /**
@@ -108,7 +110,7 @@ class TutoresController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //NO IMPLEMENTADO
     }
 
     /**
@@ -119,6 +121,10 @@ class TutoresController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // delete
+        $tutor = Tutor::find($id);
+        $tutor->delete();
+
+        return Redirect::to('tutores');
     }
 }

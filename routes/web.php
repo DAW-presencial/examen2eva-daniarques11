@@ -18,4 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('/formTutores', TutoresController::class);
+Route::resource('/tutores', TutoresController::class);

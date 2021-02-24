@@ -20,17 +20,15 @@
 
 <body class="w-100">
     <!--Nav bar-->
-    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-        <h5 class="my-0 mr-md-auto font-weight-normal">Company name</h5>
-        <nav class="my-2 my-md-0 mr-md-3">
-            <a class="p-2 text-dark" href="#">Features</a>
-            <a class="p-2 text-dark" href="#">Enterprise</a>
-            <a class="p-2 text-dark" href="#">Support</a>
-            <a class="p-2 text-dark" href="#">Pricing</a>
-        </nav>
-        <a class="btn btn-outline-primary" href="#">Sign up</a>
+    <nav class="navbar navbar-inverse">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="{{ URL::to('tutores') }}">View All tutores</a>
     </div>
-
+    <div class="nav navbar-nav">
+        <div><a href="{{ URL::to('tutores') }}">View All tutores</a></div>
+        <div><a href="{{ URL::to('tutores/create') }}">Create a tutor</div>
+    </div>
+</nav>
     @if ($errors->any())
     @foreach ($errors->all() as $error)
     <div class="alert alert-danger">{{$error}}</div>
@@ -38,7 +36,7 @@
     @endif
 
     <!--Form-->
-    <form method="POST" action="/formTutores" class="container mt-5">
+    <form method="POST" action="/tutores" class="container mt-5">
         @csrf
         <div>
             <h2>
@@ -90,7 +88,7 @@
                 </div>
                 <div class="form-group col-md-4">
                     <label for="segundoApellido">@lang('formTutores.segundoApellido')</label>
-                    <input type="number" class="form-control" name="segundoApellido" value="{{ old('segundoApellido') }}">
+                    <input type="text" class="form-control" name="segundoApellido" value="{{ old('segundoApellido') }}">
                     @error('segundoApellido')
                     <div class="text-danger my-2">{{ $message }}</div>
                     @enderror
