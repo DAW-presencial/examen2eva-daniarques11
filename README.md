@@ -9,3 +9,8 @@
 Examen dia 24/02/2021
 
 DANIEL ARQUÉS TORO
+
+Implementado todo el código.
+ 
+darques.hopto.org -> no funcional por error de configuración del servidor apache de clase
+
